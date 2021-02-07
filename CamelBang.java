@@ -1,5 +1,4 @@
 //usr/bin/env jbang "$0" "$@" ; exit $?
-//REPOS mavenCentral,asfsnap=http://repository.apache.org/snapshots/
 //DEPS org.apache.camel:camel-main:3.8.0-SNAPSHOT
 //DEPS org.apache.camel:camel-joor:3.8.0-SNAPSHOT
 //DEPS org.apache.camel:camel-timer:3.8.0-SNAPSHOT
@@ -23,7 +22,11 @@ public class CamelBang {
         if (args.length > 0) {
             StringJoiner sj = new StringJoiner(",");
             for (String a : args) {
-                sj.add("file:" + a);
+                if (!a.startsWith("http")) {
+                    sj.add("file:" + a);
+                } else {
+                    sj.add(a);
+                }
             }
             System.out.println(sj.toString());
             main.addOverrideProperty("camel.main.routes-include-pattern", sj.toString());
