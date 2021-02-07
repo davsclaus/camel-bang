@@ -1,6 +1,6 @@
 //usr/bin/env jbang "$0" "$@" ; exit $?
-//REPOS mc=https://repo1.maven.org/maven2/
 //REPOS asfsnap=http://repository.apache.org/snapshots/
+//REPOS mc=https://repo1.maven.org/maven2/
 //DEPS org.apache.camel:camel-main:3.8.0-SNAPSHOT
 //DEPS org.apache.camel:camel-joor:3.8.0-SNAPSHOT
 //DEPS org.apache.camel:camel-timer:3.8.0-SNAPSHOT
