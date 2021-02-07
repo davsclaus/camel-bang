@@ -25,7 +25,8 @@ public class CamelBang {
             for (String a : args) {
                 sj.add("file:" + a);
             }
-            main.addInitialProperty("camel.main.routes-include-pattern", sj.toString());
+            System.out.println(sj.toString());
+            main.addOverrideProperty("camel.main.routes-include-pattern", sj.toString());
         }
         main.run();
     }
