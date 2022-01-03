@@ -1,6 +1,10 @@
-# camel-bang
+# camel-bang (experiment)
 
 Apache Camel to run a Camel Java route with jbang.
+
+# Official camel-jbang
+
+This work was an early experiment that now is part of Apache Camel: https://camel.apache.org/manual/camel-jbang.html
 
 ## How to run
 
